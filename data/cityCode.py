@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class countyCode(Enum):
+class cityCode(Enum):
     Abreu_Lima = '2600054'
     Afogados_da_Ingazeira = '2600104'
     Afrânio = '2600203'

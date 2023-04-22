@@ -4,9 +4,9 @@ from ydata_profiling import ProfileReport
 from data.raw_data import getting_data
 from data.processed_data import process_data
 
-from data.countyCode import countyCode
+from data.cityCode import cityCode
 
-unprocessed_data = getting_data(countyCode.Barra_de_Guabiraba)
+unprocessed_data = getting_data(cityCode.Barra_de_Guabiraba)
 
 dataframe = process_data(unprocessed_data)
 
