@@ -1,6 +1,7 @@
 import requests
 import pandas as pd
-# import pyspark.pandas as ps
+import numpy as np
+from ydata_profiling import ProfileReport
 from bs4 import BeautifulSoup
 
 
@@ -44,7 +45,10 @@ if page.status_code == 200:
             'Last-24-hours': last_hours,
         }
     )
-    print(psdf)
+
+    profile = ProfileReport(df=psdf, title = 'TEST')
+
+    profile.to_file('ChuvaSOS.html')
 
 else:
     print('Não foi possível acessar a página:', url)
