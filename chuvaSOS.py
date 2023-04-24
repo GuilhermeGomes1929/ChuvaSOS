@@ -9,9 +9,5 @@ unprocessed_data = getting_data('2611606')
 
 dataframe = process_data(unprocessed_data)
 
-
 profile = ProfileReport(df=dataframe, title = 'TEST')
-file_existis = exists('chuvaSOS.html')
-
-if file_existis != True:
-    profile.to_file('ChuvaSOS.html')
+profile.to_file('ChuvaSOS.html')
